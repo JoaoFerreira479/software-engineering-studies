@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ideia de layout de site com cabeçalho, barra lateral e conteúdo principal.">
+    <title>Ideia de Layout de Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo</a>
+
+    <header class="header" role="banner">
+        <a href="#" class="header__logo">Marca/Logo</a>
+        <nav class="header__nav" aria-label="Menu principal">
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar" role="complementary" aria-label="Categorias e busca">
+            <div class="sidebar__bloco">
+                <h2 class="sidebar__titulo">Categorias/Itens</h2>
+                <nav aria-label="Categorias">
+                    <ul class="sidebar__lista">
+                        <li><a href="#">Categoria 1</a></li>
+                        <li><a href="#">Categoria 2</a></li>
+                        <li><a href="#">Categoria 3</a></li>
+                        <li><a href="#">Categoria 4</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar__bloco">
+                <h3 class="sidebar__subtitulo">Outro Título</h3>
+            </div>
+            <div class="sidebar__bloco">
+                <form action="#" method="post" role="search">
+                    <label for="pesquisa">Pesquise aqui:</label>
+                    <input type="search" id="pesquisa" name="pesquisa" aria-label="Pesquisar" required>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </aside>
+
+        <main id="conteudo-principal" class="main" role="main">
+            <article class="main__intro">
+                <h1>Título do Conteúdo</h1>
+                <p>Conteúdo Principal da Página</p>
+                <p>Imagem aqui</p>
+            </article>
+
+            <section class="main__secao" aria-labelledby="titulo-1">
+                <h2 id="titulo-1" class="titulo">Título 1</h2>
+                <h3 class="subtitulo">
+                    <span>Subtítulo</span> – <span>Categoria 1</span> – <span>Item 1</span>
+                </h3>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto…</p>
+                <p>Imagem aqui</p>
+            </section>
+
+            <section class="main__secao" aria-labelledby="titulo-2">
+                <h2 id="titulo-2" class="titulo">Título 2</h2>
+                <h3 class="subtitulo">
+                    <span>Subtítulo</span> – <span>Categoria 2</span> – <span>Item 2</span>
+                </h3>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto…</p>
+                <p>Imagem aqui</p>
+            </section>
+
+            <section class="main__secao" aria-labelledby="titulo-3">
+                <h2 id="titulo-3" class="titulo">Título 3</h2>
+                <h3 class="subtitulo">
+                    <span>Subtítulo</span> – <span>Categoria 3</span> – <span>Item 3</span>
+                </h3>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto…</p>
+                <p>Imagem aqui</p>
+            </section>
+
+            <section class="main__secao" aria-labelledby="titulo-4">
+                <h2 id="titulo-4" class="titulo">Título 4</h2>
+                <h3 class="subtitulo">
+                    <span>Subtítulo</span> – <span>Categoria 4</span> – <span>Item 4</span>
+                </h3>
+                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto…</p>
+                <p>Imagem aqui</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__conteudo">Rodapé</div>
+    </footer>
+</body>
+
+</html>

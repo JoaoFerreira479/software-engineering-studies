@@ -1,0 +1,129 @@
+/* Currículo - design tokens e estrutura */
+:root {
+    --curriculo-primario: #007bff;
+    --curriculo-fundo: #f0f0f0;
+    --curriculo-card: #fff;
+    --curriculo-texto: #333;
+    --curriculo-borda: #b4b4b4;
+    --curriculo-sombra: rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--curriculo-fundo);
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--curriculo-primario);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.curriculo-header {
+    background-color: var(--curriculo-primario);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+.curriculo-header__nome {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.curriculo-header__subtitulo {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    background-color: var(--curriculo-card);
+    border: 1px solid var(--curriculo-borda);
+    border-radius: 0.3125rem;
+    box-shadow: 0 4px 8px var(--curriculo-sombra);
+}
+
+.container__foto {
+    border-radius: 50%;
+    max-width: 150px;
+    width: 150px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.25rem;
+    border: 3px solid var(--curriculo-primario);
+}
+
+.container__secao {
+    margin-bottom: 1.5rem;
+}
+
+.container__secao:last-child {
+    margin-bottom: 0;
+}
+
+.container h2 {
+    color: var(--curriculo-primario);
+    border-bottom: 2px solid var(--curriculo-primario);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.container p {
+    margin: 0 0 0.5rem;
+    color: var(--curriculo-texto);
+}
+
+.container a {
+    color: var(--curriculo-primario);
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container ul {
+    padding-left: 1.25rem;
+    margin: 0 0 0.5rem;
+}
+
+.container li {
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}

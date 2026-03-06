@@ -1,0 +1,12 @@
+/* Ajustes do carrossel e ícones - Projeto Bootstrap */
+.carousel-item img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(25%) sepia(25%) saturate(25%) hue-rotate(0deg);
+}

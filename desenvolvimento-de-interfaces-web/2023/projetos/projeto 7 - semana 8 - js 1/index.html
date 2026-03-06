@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulário em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <h2>Formulário</h2>
+
+    <form id="meuFormulario">
+
+        <div class="input-container">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Selecione o seu Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div class="input-container">
+            <label>Data de Nascimento:</label>
+            <select id="dia" name="dia" required>
+            </select>
+
+            <select id="mes" name="mes" required>
+            </select>
+
+            <select id="ano" name="ano" required>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="input-container input-container--horizontal">
+            <label>Sexo:</label>
+            <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="sexo" value="Feminino" required>
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="outro" name="sexo" value="Outro" required>
+            <label for="outro">Outro</label>
+        </div>
+
+        <br>
+
+        <div class="input-container input-container--horizontal">
+            <label>Interesses:</label>
+            <input type="checkbox" id="esporte" name="interesses" value="Esporte">
+            <label for="esporte">Esporte</label>
+            <input type="checkbox" id="musica" name="interesses" value="Música">
+            <label for="musica">Música</label>
+            <input type="checkbox" id="viagem" name="interesses" value="Viagem">
+            <label for="viagem">Viagem</label>
+            <input type="checkbox" id="tecnologia" name="interesses" value="Tecnologia">
+            <label for="tecnologia">Tecnologia</label>
+            <input type="checkbox" id="outros" name="interesses" value="Outros">
+            <label for="outros">Outros</label>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Submeter">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* Layout Menu Mobile - Cafezinho */
+:root {
+    --cafe-primario: #8b5a2b;
+    --cafe-secundario: #a07040;
+    --cafe-escuro: #7a4f2a;
+    --cafe-hover: #8b5e3b;
+    --branco: #fff;
+    --borda: #ccc;
+    --sombra: rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--cafe-primario);
+    color: var(--branco);
+    padding: 1.25rem 0;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 2.5rem;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 2.5rem;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+    border-radius: 0.3125rem;
+    border: 1px solid var(--borda);
+    background-color: var(--branco);
+    min-width: 12.5rem;
+}
+
+.top-nav {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.top-nav a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.top-nav a:hover {
+    color: var(--cafe-secundario);
+}
+
+.login-btn {
+    background-color: var(--cafe-escuro);
+    color: var(--branco);
+    padding: 0.625rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.login-btn:hover {
+    background-color: var(--cafe-secundario);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: var(--branco);
+    cursor: pointer;
+    position: absolute;
+    right: 2.5rem;
+    top: 0.9375rem;
+    padding: 0.25rem;
+    user-select: none;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--cafe-secundario);
+    padding: 1rem;
+    font-size: 1.125rem;
+    margin-top: 0.625rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.bottom-nav a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.bottom-nav a:hover {
+    color: var(--cafe-hover);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    max-width: 62.5rem;
+    margin: 2.25rem auto 0;
+    padding: 1.25rem;
+}
+
+.container__titulo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--cafe-primario);
+    font-size: 2rem;
+}
+
+.card {
+    width: calc(25% - 1.25rem);
+    max-width: 12.5rem;
+    aspect-ratio: 3 / 4;
+    background-color: var(--cafe-primario);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--branco);
+    font-weight: bold;
+    border-radius: 0.625rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+    padding-bottom: 0.625rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+@media screen and (max-width: 800px) {
+    .top-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        padding: 1.25rem 0;
+        gap: 0;
+    }
+
+    .top-nav a {
+        display: block;
+        padding: 0.625rem 0;
+        font-size: 1.25rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .top-nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: calc(33.33% - 1.25rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 1.25rem);
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin: 0.625rem 0;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

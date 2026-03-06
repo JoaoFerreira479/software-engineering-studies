@@ -1,0 +1,32 @@
+/* Projeto 1 - Primeiro site */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    background-color: #fef9c3;
+}
+
+.conteudo {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.conteudo__texto {
+    margin: 0 0 1rem;
+    font-size: 1.125rem;
+}
+
+.conteudo__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receitas de doces para o Halloween: abóboras, brigadeiro, biscoitos e mais.">
+    <title>Receitas de Halloween</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+    <header class="page-header" role="banner">
+        <h1 class="page-header__title">Receitas de Doces para o Halloween</h1>
+    </header>
+
+    <main id="conteudo-principal" class="main" role="main">
+        <section class="receitas" aria-label="Lista de receitas">
+            <div id="card-container" class="receitas__grid" role="list">
+                <!-- Cards inseridos via JS -->
+            </div>
+            <div id="erro-carregamento" class="receitas__erro hidden" role="alert" aria-live="assertive">
+                <p>Não foi possível carregar as receitas. Tente novamente mais tarde.</p>
+            </div>
+            <div id="estado-carregando" class="receitas__loading" aria-live="polite" aria-busy="true">
+                <p>Carregando receitas…</p>
+            </div>
+        </section>
+    </main>
+
+    <dialog id="modal-receita" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao">
+        <div class="modal__inner">
+            <h2 id="modal-titulo" class="modal__titulo"></h2>
+            <p id="modal-descricao" class="modal__descricao"></p>
+            <h3 class="modal__subtitulo" id="modal-ingredientes-titulo">Ingredientes</h3>
+            <ul id="modal-ingredientes" class="modal__lista"></ul>
+            <h3 class="modal__subtitulo" id="modal-preparo-titulo">Modo de preparo</h3>
+            <ol id="modal-preparo" class="modal__lista modal__lista--numerada"></ol>
+            <footer class="modal__footer">
+                <button type="button" id="modal-fechar" class="btn btn--primary modal__fechar">Fechar</button>
+            </footer>
+        </div>
+    </dialog>
+</body>
+
+</html>

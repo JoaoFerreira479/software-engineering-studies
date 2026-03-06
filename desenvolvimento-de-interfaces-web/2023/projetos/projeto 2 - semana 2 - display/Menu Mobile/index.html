@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layout com menu mobile - Cafezinho.">
+    <title>Layout Mobile - Cafezinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <div class="top-bar">
+            <div class="logo">Logotipo</div>
+            <label for="busca-mobile" class="visually-hidden">Pesquisar</label>
+            <input type="search" id="busca-mobile" class="search-bar" placeholder="Pesquise aqui..." aria-label="Pesquisar">
+
+            <input type="checkbox" id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="top-nav-mobile" aria-label="Abrir menu">
+            <label for="menuToggle" class="menu-icon" aria-hidden="true">☰</label>
+
+            <nav id="top-nav-mobile" class="top-nav" aria-label="Menu principal">
+                <a href="#">Meus Pedidos</a>
+                <a href="#">Promoções</a>
+                <button type="button" class="login-btn">Entre ou Cadastre-se</button>
+            </nav>
+        </div>
+        <nav class="bottom-nav" aria-label="Categorias">
+            <a href="#">Cardápio</a>
+            <a href="#">Cafés</a>
+            <a href="#">Cafeteiras</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Bebidas & Gourmet</a>
+            <a href="#">Cafés Especiais</a>
+            <a href="#">Seu Dia a Dia mais Completo!</a>
+            <a href="#">Comece como um Profissional</a>
+            <a href="#">Saiba Mais</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="container" aria-label="Produtos">
+            <h2 class="container__titulo">Mobile Cafezinho</h2>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+            <div class="card">Texto</div>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

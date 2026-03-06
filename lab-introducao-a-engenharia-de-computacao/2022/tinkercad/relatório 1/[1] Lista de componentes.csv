@@ -1,0 +1,6 @@
+﻿Nome,Quantidade,Componente
+"R1, R2",2,"220 Ω Resistor"
+"BAT2, BAT1",2," Bateria 3V do tipo moeda"
+"S1",1," Interruptor deslizante"
+"D6",1,"Azul LED"
+"D7",1,"Vermelho LED"

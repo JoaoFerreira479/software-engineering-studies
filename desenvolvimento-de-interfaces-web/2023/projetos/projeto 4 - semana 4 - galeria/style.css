@@ -1,0 +1,130 @@
+/* Galeria de Gatinhos */
+:root {
+    --galeria-header: #ff758f;
+    --galeria-fundo: #f5f5fa;
+    --galeria-sombra: rgba(0, 0, 0, 0.1);
+    --modal-backdrop: rgba(0, 0, 0, 0.8);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--galeria-fundo);
+    text-align: center;
+}
+
+.skip-link {
+    position: absolute;
+    top: -2.5rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--galeria-header);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.page-header {
+    background-color: var(--galeria-header);
+    padding: 1.25rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.page-header__title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    padding: 2rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.foto {
+    margin: 0;
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px var(--galeria-sombra);
+    padding: 1.25rem;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.foto:hover,
+.foto:focus-visible {
+    transform: scale(1.05);
+    outline: 2px solid var(--galeria-header);
+    outline-offset: 2px;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    vertical-align: middle;
+}
+
+/* Modal (dialog) */
+.modal {
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.modal::backdrop {
+    background: var(--modal-backdrop);
+}
+
+.modal__fechar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.modal__fechar:hover,
+.modal__fechar:focus-visible {
+    color: #f87171;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.modal__imagem {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de imagens de gatinhos em grid com lightbox.">
+    <title>Galeria de Gatinhos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <a href="#galeria" class="skip-link">Ir para a galeria</a>
+
+    <header class="page-header" role="banner">
+        <h1 class="page-header__title">Galeria de Gatinhos</h1>
+    </header>
+
+    <main id="galeria" class="galeria" role="main" aria-label="Galeria de fotos">
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 1 na tela cheia" data-index="0">
+            <img src="img1.jpg" alt="Foto de gato 1" loading="lazy" width="300" height="200">
+        </figure>
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 2 na tela cheia" data-index="1">
+            <img src="img2.jpg" alt="Foto de gato 2" loading="lazy" width="300" height="200">
+        </figure>
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 3 na tela cheia" data-index="2">
+            <img src="img3.jpg" alt="Foto de gato 3" loading="lazy" width="300" height="200">
+        </figure>
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 4 na tela cheia" data-index="3">
+            <img src="img4.jpg" alt="Foto de gato 4" loading="lazy" width="300" height="200">
+        </figure>
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 5 na tela cheia" data-index="4">
+            <img src="img5.jpg" alt="Foto de gato 5" loading="lazy" width="300" height="200">
+        </figure>
+        <figure class="foto" tabindex="0" role="button" aria-label="Abrir imagem 6 na tela cheia" data-index="5">
+            <img src="img6.jpg" alt="Foto de gato 6" loading="lazy" width="300" height="200">
+        </figure>
+    </main>
+
+    <dialog id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+        <button type="button" id="fechar" class="modal__fechar" aria-label="Fechar">×</button>
+        <img id="imagem-modal" class="modal__imagem" src="" alt="Imagem ampliada">
+    </dialog>
+</body>
+
+</html>

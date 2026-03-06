@@ -1,0 +1,233 @@
+/* Ideia de Layout - tokens e estrutura */
+:root {
+    --cor-header: #222;
+    --cor-header-link: #fff;
+    --cor-header-hover: #444;
+    --cor-texto: #333;
+    --cor-titulo: #222;
+    --cor-borda: #ddd;
+    --cor-input-border: #ccc;
+    --cor-btn: #007bff;
+    --cor-btn-hover: #0056b3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--cor-btn);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 2px solid var(--cor-titulo);
+    outline-offset: 2px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--cor-header);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.875rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    color: var(--cor-header-link);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__logo:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0 1.25rem;
+}
+
+.menu a {
+    color: var(--cor-header-link);
+    text-decoration: none;
+    padding: 0.625rem 1rem;
+    transition: background-color 0.2s;
+    border-radius: 0.3125rem;
+}
+
+.menu a:hover {
+    background-color: var(--cor-header-hover);
+}
+
+/* Layout principal: aside + main */
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 8rem);
+}
+
+.sidebar {
+    flex: 0 0 11.25rem;
+    background-color: #fff;
+    color: #000;
+    padding: 1.25rem;
+    border: 1px solid var(--cor-borda);
+    border-top: none;
+}
+
+.sidebar__bloco {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar__titulo,
+.sidebar__subtitulo {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+}
+
+.sidebar__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar__lista li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar__lista a {
+    color: var(--cor-titulo);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sidebar__lista a:hover {
+    color: #000;
+}
+
+.sidebar form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.sidebar form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--cor-input-border);
+    border-radius: 0.3125rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar form input:focus {
+    outline: 2px solid var(--cor-btn);
+    outline-offset: 1px;
+}
+
+.sidebar form button {
+    background-color: var(--cor-btn);
+    color: #fff;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.sidebar form button:hover {
+    background-color: var(--cor-btn-hover);
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+    padding: 1.25rem;
+    max-width: 56.25rem;
+}
+
+.main__intro h1,
+.main h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    color: var(--cor-titulo);
+    margin: 0 0 1.25rem;
+}
+
+.main .titulo {
+    color: var(--cor-titulo);
+    border-bottom: 2px solid var(--cor-titulo);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.main p {
+    text-align: justify;
+    color: var(--cor-texto);
+    margin: 0 0 0.75rem;
+}
+
+.main__secao {
+    margin-bottom: 1.5rem;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 0.5rem;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--cor-header);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer__conteudo {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+}
