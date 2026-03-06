@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "api.security.jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret used to sign and verify JWT tokens."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Vantagens - Aluno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎁 Vantagens Disponíveis</h1>
+            <p>Visualize todas as vantagens que você pode resgatar</p>
+        </header>
+
+        <nav class="breadcrumb">
+            <a href="index.html">← Voltar ao Início</a>
+        </nav>
+
+        <div class="actions-bar">
+            <button id="refreshBtn" class="btn btn-secondary">🔄 Atualizar Lista</button>
+        </div>
+
+        <div id="loading" class="loading">
+            <p>Carregando vantagens...</p>
+        </div>
+
+        <div id="vantagens-container" class="vantagens-grid">
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="demo-api.js"></script>
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="listagem-vantagens.js"></script>
+</body>
+</html>
