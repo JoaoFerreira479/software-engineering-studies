@@ -1,0 +1,112 @@
+[
+    {
+        "titulo": "Docinho de leite ninho em formato de Abóbora",
+        "descricao": "Delicioso docinho de leite ninho decorado como pequenas abóboras.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img1.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- 400g de leite em pó Ninho",
+            "- 400g de açúcar refinado",
+            "- 100ml de leite de coco",
+            "- Corante alimentício laranja",
+            "- Cravo-da-Índia para decorar"
+        ],
+        "modopreparo": [
+            "1. Misture o leite em pó e o açúcar.",
+            "2. Acrescente o leite de coco e o corante.",
+            "3. Modele em formato de pequenas abóboras.",
+            "4. Passe no açúcar refinado e decore com cravo-da-Índia."
+        ]
+    },
+    {
+        "titulo": "Brigadeiro de colher em formato de Túmulo",
+        "descricao": "Uma versão assustadora do clássico brigadeiro de colher.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img2.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- 1 lata de leite condensado",
+            "- 2 colheres de sopa de cacau em pó",
+            "- 1 colher de sopa de manteiga",
+            "- Biscoitos de chocolate para decoração"
+        ],
+        "modopreparo": [
+            "1. Misture o leite condensado, cacau em pó e manteiga em uma panela.",
+            "2. Cozinhe em fogo baixo até engrossar.",
+            "3. Sirva em copinhos e decore com biscoitos quebrados simulando terra."
+        ]
+    },
+    {
+        "titulo": "Biscoito de dedo de Zumbi",
+        "descricao": "Biscoitos assustadoramente deliciosos em formato de dedos de zumbi.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img3.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- 200g de manteiga",
+            "- 1 xícara de açúcar",
+            "- 1 ovo",
+            "- 2 xícaras de farinha de trigo",
+            "- Amêndoas para as unhas"
+        ],
+        "modopreparo": [
+            "1. Misture todos os ingredientes e modele em formato de dedos.",
+            "2. Pressione uma amêndoa na ponta para fazer a unha.",
+            "3. Asse a 180°C por 15 minutos até dourar."
+        ]
+    },
+    {
+        "titulo": "Brigadeiro de Abóbora",
+        "descricao": "Um brigadeiro especial feito com abóbora para entrar no clima do Halloween.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img4.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- 200g de abóbora cozida e amassada",
+            "- 1 lata de leite condensado",
+            "- 1 colher de sopa de manteiga",
+            "- Canela em pó a gosto"
+        ],
+        "modopreparo": [
+            "1. Misture todos os ingredientes em uma panela.",
+            "2. Cozinhe em fogo baixo até engrossar.",
+            "3. Modele em bolinhas e passe no açúcar com canela."
+        ]
+    },
+    {
+        "titulo": "Morango Fantasmagórico",
+        "descricao": "Morangos cobertos de chocolate branco em forma de fantasmas.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img5.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- Morangos frescos",
+            "- Chocolate branco derretido",
+            "- Chocolate meio amargo para os olhos"
+        ],
+        "modopreparo": [
+            "1. Banhe os morangos no chocolate branco derretido.",
+            "2. Deixe secar e desenhe os olhos com chocolate meio amargo.",
+            "3. Sirva após endurecer."
+        ]
+    },
+    {
+        "titulo": "Maçã Envenenada",
+        "descricao": "Maçãs caramelizadas com uma aparência macabra.",
+        "fonte": "Cooky Receitas",
+        "imagem": "img6.jpg",
+        "link": "pagina.html",
+        "ingredientes": [
+            "- 4 maçãs vermelhas",
+            "- 1 xícara de açúcar",
+            "- 1/2 xícara de glucose de milho",
+            "- Corante preto comestível"
+        ],
+        "modopreparo": [
+            "1. Misture o açúcar, glucose de milho e corante em uma panela.",
+            "2. Cozinhe até atingir o ponto de bala dura.",
+            "3. Banhe as maçãs e deixe secar sobre papel manteiga."
+        ]
+    }
+]

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Museu do Louvre - álbum e coleções.">
+    <title>Museu do Louvre - Portal de Álbuns</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="album.js" defer></script>
+    <script src="modal.js" defer></script>
+    <script src="salvo.js" defer></script>
+</head>
+
+<body class="site">
+    <a href="#conteudo-album" class="skip-link">Ir para o conteúdo</a>
+
+    <nav class="navbar navbar--fixed navbar-expand-lg bg-body-tertiary" role="navigation" aria-label="Menu principal">
+        <div class="container-fluid col-11 m-auto">
+            <a class="navbar-brand" href="#">Viagens pelo Mundo!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Voltar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#colecoes">Coleções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meus-albuns.html">Meus Álbuns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#saibamais">Saiba Mais</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo-album" class="main-album">
+        <section id="sobre" class="card mb-3 col-11 m-auto" aria-labelledby="louvre-titulo">
+            <img id="imagemLouvre" class="card-img-top" alt="Museu do Louvre" loading="lazy">
+            <div class="card-body">
+                <h2 id="louvre-titulo" class="card-title h5"></h2>
+                <p id="informacoesLouvre" class="card-text"></p>
+                <p class="card-text"><small id="fonteLouvre" class="text-body-secondary"></small></p>
+                <p class="card-text"><small id="geolocalizacaoLouvre" class="text-body-secondary"></small></p>
+                <p class="card-text"><small id="dataLouvre" class="text-body-secondary"></small></p>
+                <div class="album-sobre__botoes">
+                    <a href="https://www.louvre.fr/" class="btn btn-primary" id="saibaMaisBtn" target="_blank" rel="noopener noreferrer">Saiba Mais</a>
+                    <button type="button" class="btn btn-outline-primary" id="salvarNoCarrossel">Salvar este Álbum</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="colecoes" class="album-colecoes" aria-labelledby="colecoes-titulo">
+            <div class="album-colecoes__header col-11 m-auto">
+                <h2 id="colecoes-titulo" class="album-colecoes__titulo">Coleções</h2>
+                <h3 id="riquezas-titulo" class="album-colecoes__subtitulo">As Riquezas do Museu do Louvre</h3>
+                <p class="album-colecoes__intro">O renomado Museu do Louvre é um verdadeiro tesouro que abriga uma impressionante diversidade de coleções, abrangendo uma ampla variedade de períodos históricos e estilos artísticos.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 col-11 m-auto" id="colecoesContainer"></div>
+        </section>
+
+        <section id="saibamais" class="card text-center album-saibamais" aria-labelledby="viagem-titulo">
+            <div class="card-body">
+                <h2 id="viagem-titulo" class="card-title">A Sua Viagem Ainda Não Acabou!</h2>
+                <p class="card-text">Se deseja conhecer outros museus e pontos turísticos na França, clique no botão "Saiba Mais" abaixo.</p>
+                <a href="https://www.france.fr/pt" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Saiba Mais</a>
+            </div>
+        </section>
+    </main>
+
+    <button type="button" id="btnOffline" class="btn-offline" title="Alternar modo offline" aria-label="Modo offline">
+        <span class="btn-offline__icon" aria-hidden="true"></span>
+        <span class="btn-offline__label">Offline</span>
+    </button>
+
+    <script src="offline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var btn = document.getElementById("btnOffline");
+            function updateLabel() {
+                if (!btn) return;
+                var off = window.PortalOffline && window.PortalOffline.isOfflineMode();
+                btn.classList.toggle("btn-offline--active", off);
+                btn.querySelector(".btn-offline__label").textContent = off ? "Online" : "Offline";
+                btn.setAttribute("title", off ? "Clique para usar dados do servidor" : "Clique para modo offline");
+            }
+            if (btn) {
+                btn.addEventListener("click", function () {
+                    if (window.PortalOffline) { window.PortalOffline.toggleOfflineMode(); window.location.reload(); }
+                });
+                if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", updateLabel);
+                else updateLabel();
+            }
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabela das fases da Lua por ano — dados calculados com base em algoritmos astronômicos.">
+    <title>Fases da Lua por ano</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main class="container" role="main">
+        <h1>Tabela: Fases da Lua</h1>
+        <p class="subtitulo">(Tema em homenagem ao Eclipse Solar de 14/10/2023)</p>
+
+        <div class="ano-container">
+            <label for="ano-fases">Ano:</label>
+            <input type="number" id="ano-fases" name="ano" min="1900" max="2100" value="2023" aria-label="Escolha o ano para ver as fases da Lua">
+            <button type="button" id="btn-atualizar-fases">Atualizar tabela</button>
+        </div>
+
+        <table id="fasesdalua-table" class="fases-table" aria-label="Fases da Lua no ano selecionado">
+            <caption class="fases-table__caption">
+                Dados calculados com base em algoritmos astronômicos (SunCalc). Referência: Departamento de Astronomia do IAG/USP.
+            </caption>
+        </table>
+    </main>
+</body>
+
+</html>

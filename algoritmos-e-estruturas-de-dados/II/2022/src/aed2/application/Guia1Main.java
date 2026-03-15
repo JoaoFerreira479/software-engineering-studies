@@ -1,0 +1,39 @@
+package aed2.application;
+
+import aed2.domain.algoritmos.Fibonacci;
+import aed2.domain.algoritmos.VetorUtil;
+import aed2.infrastructure.io.Console;
+
+public final class Guia1Main {
+
+    private Guia1Main() {}
+
+    public static void main(String[] args) {
+        try {
+            executarExemploFibonacci();
+            executarExemploSomaDosTermos();
+            executarExemploDivisiveisPor();
+        } catch (IllegalArgumentException e) {
+            Console.erro("Erro: " + e.getMessage());
+        }
+    }
+
+    private static void executarExemploFibonacci() {
+        int quantidade = 10;
+        int[] fibonacci = Fibonacci.gerar(quantidade);
+        Console.println("Série de Fibonacci: " + VetorUtil.formatar(fibonacci));
+    }
+
+    private static void executarExemploSomaDosTermos() {
+        int[] vetorExemplo = { 1, 3, 5, 7, 9, 11 };
+        int soma = VetorUtil.somaPrimeirosN(vetorExemplo, 4);
+        Console.println("Soma dos primeiros 4 números: " + soma);
+    }
+
+    private static void executarExemploDivisiveisPor() {
+        int[] vetorDivisiveis = { 10, 15, 22, 33, 40 };
+        int divisor = 10;
+        int[] divisiveisPor10 = VetorUtil.filtrarDivisiveisPor(vetorDivisiveis, divisor);
+        Console.println("Números divisíveis por " + divisor + ": " + VetorUtil.formatar(divisiveisPor10));
+    }
+}
